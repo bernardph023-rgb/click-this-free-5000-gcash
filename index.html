@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop style="display: none;" controls>
+        <source src="iris.mp3.mp4" type="audio/mp4">
+        <source src="iris.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating hearts background -->
+    <div class="heart-bg" id="heartBg"></div>
+
+    <!-- Login Screen -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-box">
+            <div class="lock-icon">🔒</div>
+            <h1>Enter Here Your Birthday Baby</h1>
+            <p>Enter the passcode to unlock!</p>
+            <input 
+                type="password" 
+                id="passcodeInput" 
+                class="passcode-input" 
+                placeholder="••••••" 
+                autocomplete="off"
+            >
+            <button class="unlock-btn" onclick="checkPasscode()">Unlock</button>
+            <div class="error-message" id="errorMessage">❌ Wrong passcode. Try again!</div>
+        </div>
+    </div>
+
+    <!-- Valentine Question Modal -->
+    <div class="question-container hidden" id="questionContainer">
+        <div class="question-box">
+            <h1>💌 Will You Be My Valentine? 💌</h1>
+            <p>SAY YES PLEASE, SUBUKAN MO LANG TALAGANG MAG NO DYAN HAHAHAHAHA</p>
+            <div class="button-group">
+                <button class="yes-btn" onclick="answerYes()">Yes! ❤️</button>
+                <button class="yes-btn" onclick="answerYes()">Yes! 💕</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content hidden" id="mainContent">
+        <!-- Decorations -->
+        <div class="decoration top-left">💕</div>
+        <div class="decoration top-right">🌹</div>
+        <div class="decoration bottom-left">💐</div>
+        <div class="decoration bottom-right">💕</div>
+        <div class="decoration mid-left">🌺</div>
+        <div class="decoration mid-right">🎀</div>
+
+        <!-- Envelope -->
+        <div class="envelope-container">
+            <div class="envelope" id="envelope" onclick="toggleEnvelope()">
+                <div class="envelope-flap">
+                    <span>💌</span>
+                </div>
+                <div class="envelope-body">
+                    <span style="color: #ff69b4;">CLICK THIS BABY TO OPEN</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Letter (Outside envelope container) -->
+    <div class="letter" id="letter">
+        <div class="letter-header">
+            ❤️ Will You Be My Valentine? ❤️
+        </div>
+        <div class="letter-content">
+            <p style="margin-bottom: 15px; font-size: 0.95rem;">
+                My Most Precious Baby,
+            </p>
+            <p style="margin-bottom: 12px; font-size: 0.9rem; line-height: 1.6;">
+                Since the day I met you, baby, I’ve realized so many things about love and about myself. I realized that even with all my flaws and complicated sides, there is someone who can truly handle me—with patience, understanding, and care. That person is you, baby.
+            </p>
+            <p style="margin-bottom: 12px; font-size: 0.9rem; line-height: 1.6;">
+                You are the one who made me feel what real love is, baby. Even with the distance between us, I feel it so deeply. In the way you talk to me, in the way you reassure me, and in the way you choose me every day—I feel your love, baby, even from miles away.
+            <p style="margin-bottom: 12px; font-size: 0.9rem; line-height: 1.6;">
+                I really love you, baby—especially the way you tease me, and even when you get a little matampuhin at may konting pagtataray sometimes, haha. You’re so cute, baby, and that just makes me love you even more.
+            </p>
+            <p style="margin-bottom: 12px; font-size: 0.9rem; line-height: 1.6;">
+                You didn’t just say you loved me, baby, you showed it. And because of you, I learned that real love isn’t about how close you are physically, but how connected you are at heart.
+            </p>
+            <p>Baby, will you be my Valentine, even if we’re far apart?</p>
+            <div class="letter-signature">
+                Your Baby 💕<br>
+                <span style="font-size: 1rem; margin-top: 8px;">Luwi cute ❤️</span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
