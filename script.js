@@ -1,4 +1,4 @@
-const CORRECT_PASSCODE = "090909"; // Change this to your desired passcode
+const CORRECT_PASSCODE = "112107"; // Change this to your desired passcode
 
 // Create floating hearts in background
 function createFloatingHearts() {
@@ -94,3 +94,4 @@ function createHeartRain() {
 
 // Initialize
 createFloatingHearts();
+
